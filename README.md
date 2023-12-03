@@ -8,7 +8,7 @@ Este programa en Python simula la generación de datos en tiempo real y notifica
 
 - **Constructor `__init__`:**
   - Inicia el objeto llamado `RealTimeDataManager` con unos datos (iniciales) de temperatura y humedad.
-  - Se crea una instancia de `EventManager` con el nombre de `self.event_manager`.
+  - Se crea una instancia de `EventManager`.
 
 - **Método `start_real_time_updates`:**
   - Crea un bucle infinito que espera 3 segundos y luego genera datos utilizando `generate_real_time_data` y además notifica a los suscriptores utilizando `self.event_manager.notify`.
