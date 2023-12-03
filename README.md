@@ -48,7 +48,7 @@ Este programa en Python simula la generación de datos en tiempo real y notifica
 
 ### Bloque `if __name__ == "__main__":`
 
-Garantiza que la función `main` se ejecute solo si el script se ejecuta directamente y no se importa como un módulo en otro script.
+Hace que la función `main` se ejecute cuando el script se ejecuta directamente y no cuando es importado como un módulo en otro script.
 
 ---
 
@@ -95,7 +95,7 @@ Se definen funciones lambda para realizar las operaciones de suma, resta, multip
 
 ### Bloque `if __name__ == "__main__":`
 
-Garantiza que la función `main` se ejecute solo si el script se ejecuta directamente y no se importa como un módulo en otro script.
+Hace que la función `main` se ejecute cuando el script se ejecuta directamente y no cuando es importado como un módulo en otro script.
 
 ---
 
