@@ -64,6 +64,7 @@ Al ejecutar el archivo `simulacion.py` se produce una salida similar a la siguie
 Datos en tiempo real actualizados: {'temperatura': 24.8144788325153, 'humedad': 59.22656452432036}
 
 Datos en tiempo real actualizados: {'temperatura': 25.695321492733867, 'humedad': 61.59471649132475}
+
 Datos en tiempo real actualizados: {'temperatura': 24.85648409627055, 'humedad': 60.57975982047561}
 
 
@@ -99,6 +100,11 @@ Se definen funciones lambda para realizar las operaciones de suma, resta, multip
 Garantiza que la función `main` se ejecute solo si el script se ejecuta directamente y no se importa como un módulo en otro script.
 
 ---
+
+**Instrucciones de uso:**
+
+1. Se debe ejecutar `calculadora.py` para iniciar la calculadora.
+2. El programa va a solicitar dos números y la operación que se desea realizar.
 
 ## Ejemplo de Salida del Programa
 
