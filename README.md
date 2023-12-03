@@ -4,7 +4,7 @@ Este programa en Python simula la generación de datos en tiempo real y notifica
 
 ## datamanager.py
 
-### `RealTimeDataManager` class:
+### RealTimeDataManager class:
 
 - **Constructor (`__init__`):**
   - Inicializa el objeto `RealTimeDataManager` con datos iniciales de temperatura y humedad.
