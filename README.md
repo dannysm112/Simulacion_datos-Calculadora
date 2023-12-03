@@ -142,9 +142,9 @@ Salir.
 
 ## Explicación de los resultados
 
-- **Suma (Operación `+`):** El usuario ingresó 10 y 5, y eligió la suma. El resultado es 15.
-- **Multiplicación (Operación `*`):** El usuario ingresó 8 y 2, y eligió la multiplicación. El resultado es 16.
+- **Suma (Operación `+`):** El usuario ingresó 10 y 5 y eligió la suma. El resultado es 15.
+- **Multiplicación (Operación `*`):** El usuario ingresó 8 y 2 y eligió la multiplicación. El resultado es 16.
 - **División entre Cero (`Error: División entre cero`):** El usuario intentó dividir 12 entre 0, por lo cual se muestra un mensaje de error.
 - **Valor inválido (`Operación inválida`):** El usuario intentó ingresar algo que no es un número, por lo cual se imprime un mensaje de error.
-- **Resta (Operación `-`):** El usuario ingresó 4 y 3, y eligió la resta. El resultado es 1.
+- **Resta (Operación `-`):** El usuario ingresó 4 y 3 y eligió la resta. El resultado es 1.
 - **Salir (`exit`):** El usuario ingresó "exit" y se termina el programa.
