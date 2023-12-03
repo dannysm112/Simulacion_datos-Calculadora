@@ -108,41 +108,37 @@ Garantiza que la función `main` se ejecute solo si el script se ejecuta directa
 
 Al ejecutar el archivo `calculadora.py` se produce una salida similar a la siguiente:
 
-Ingrese un numero: 10
-Ingrese otro numero: 5
-Elija una operacion (+, -, *, /) o escriba 'exit' para salir: +
+Ingrese un numero: 10  
+Ingrese otro numero: 5  
+Elija una operacion (+, -, *, /) o escriba 'exit' para salir: +  
+Calculando...  
+Resultado: 15.0  
 
-Calculando...      
-Resultado: 15.0
+Ingrese un numero: 8  
+Ingrese otro numero: 2  
+Elija una operacion (+, -, *, /) o escriba 'exit' para salir: *  
+Calculando...  
+Resultado: 16.0  
 
-Ingrese un numero: 8
-Ingrese otro numero: 2
-Elija una operacion (+, -, *, /) o escriba 'exit' para salir: *
+Ingrese un numero: 12  
+Ingrese otro numero: 0  
+Elija una operacion (+, -, *, /) o escriba 'exit' para salir: /  
+Calculando...  
+Resultado: Error: División entre cero  
 
-Calculando...      
-Resultado: 16.0
+Ingrese un numero: abc  
+Input invalido. Por favor ingrese numeros.  
 
-Ingrese un numero: 12
-Ingrese otro numero: 0
-Elija una operacion (+, -, *, /) o escriba 'exit' para salir: /
+Ingrese un numero: 4  
+Ingrese otro numero: 3  
+Elija una operacion (+, -, *, /) o escriba 'exit' para salir: -  
+Calculando...  
+Resultado: 1.0  
 
-Calculando...
-Resultado: Error: División entre cero
-
-Ingrese un numero: abc
-Input invalido. Por favor ingrese numeros.
-
-Ingrese un numero: 4
-Ingrese otro numero: 3
-Elija una operacion (+, -, *, /) o escriba 'exit' para salir: -
-
-Calculando...      
-Resultado: 1.0
-
-Ingrese un numero: 3
-Ingrese otro numero: 4
-Elija una operacion (+, -, *, /) o escriba 'exit' para salir: exit 
-Salir.
+Ingrese un numero: 3  
+Ingrese otro numero: 4  
+Elija una operacion (+, -, *, /) o escriba 'exit' para salir: exit  
+Salir.  
 
 ## Explicación de los resultados
 
