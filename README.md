@@ -83,7 +83,7 @@ Este programa en Python es una calculadora sencilla con operaciones básicas. Pe
 
 ### Función `get_user_input`:
 
-Esta función obtiene la entrada del usuario. Utiliza un bloque `try-except` para manejar errores en caso de que el usuario ingrese algo inválido (que no sea un número). Pide al usuario que ingrese dos números y la operación que desea realizar (+, -, *, /). También, permite ingresar 'exit' para salir. Si se produce al intentar convertir la entrada a un `float` se imprime un mensaje de error y se solicita la entrada nuevamente.
+Esta función obtiene la entrada del usuario. Utiliza un bloque `try-except` para manejar errores en caso de que el usuario ingrese algo inválido (que no sea un número). Pide al usuario que ingrese dos números y la operación que desea realizar (+, -, *, /). También, permite ingresar 'exit' para salir. Si hay un error al intentar convertir la entrada a un `float` se imprime un mensaje de error y se solicita la entrada nuevamente.
 
 ### Función `ejecutar_operacion`:
 
