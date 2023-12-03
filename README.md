@@ -46,6 +46,10 @@ Este programa en Python simula la generación de datos en tiempo real y notifica
   - El bucle infinito se usa para mantener el programa en ejecución hasta que se recibe una interrupción.
   - Se maneja la interrupción y se imprime un mensaje de cierre.
 
+### Bloque `if __name__ == "__main__":`
+
+Garantiza que la función `main` se ejecute solo si el script se ejecuta directamente y no se importa como un módulo en otro script.
+
 ---
 
 **Instrucciones de uso:**
@@ -77,8 +81,6 @@ Este programa en Python es una calculadora sencilla con operaciones básicas. Pe
 
 ## calculadora.py
 
-## Estructura del programa
-
 ### Función `get_user_input`:
 
 Esta función obtiene la entrada del usuario. Utiliza un bloque `try-except` para manejar errores en caso de que el usuario ingrese algo inválido (que no sea un número). Pide al usuario que ingrese dos números y la operación que desea realizar (+, -, *, /). También, permite ingresar 'exit' para salir. Si se produce al intentar convertir la entrada a un `float` se imprime un mensaje de error y se solicita la entrada nuevamente.
@@ -87,88 +89,54 @@ Esta función obtiene la entrada del usuario. Utiliza un bloque `try-except` par
 
 Toma la entrada del usuario y una función de callback como argumentos. Se llama a la función de callback con los dos números ingresados por el usuario y se muestra el resultado.
 
-### Función `main`
+### Función `main`:
 
-Define funciones lambda para realizar las operaciones de suma, resta, multiplicación y división. Crea un diccionario llamado `operations` que mapea los operadores (+, -, *, /) a las funciones lambda correspondientes. Utiliza un bucle infinito (`while True`) para solicitar continuamente la entrada del usuario y realizar operaciones. Dentro del bucle, obtiene la entrada del usuario llamando a `get_user_input`. Verifica si el usuario quiere salir. Si el operador ingresado es 'exit', imprime un mensaje y sale del bucle. Si el operador está en el diccionario `operations`, llama a la función `ejecutar_operacion` con la entrada del usuario y la función lambda correspondiente. Si el operador no está en el diccionario, imprime un mensaje de "Operación inválida".
+Se definen funciones lambda para realizar las operaciones de suma, resta, multiplicación y división. Se crea un diccionario llamado `operations` que relaciona los operadores (+, -, *, /) a las funciones lambda. Utiliza un bucle infinito (`while True`) para pedir la entrada del usuario y realizar las operaciones. Dentro del bucle, se obtiene la entrada del usuario utilizando `get_user_input`. Si el operador ingresado es 'exit' se imprime un mensaje y sale del bucle. Si el operador está en el diccionario `operations` se llama a la función `ejecutar_operacion` con la entrada del usuario y la función lambda que corresponda. Si el operador no está en el diccionario, imprime el mensaje de "Operación inválida". Se previene que el usuario intente usar la operación de división entre cero, en ese caso se imprime un mensaje de "Error: División entre cero".
 
-### Llamada a `main` en el bloque `if __name__ == "__main__":`
+### Bloque `if __name__ == "__main__":`
 
 Garantiza que la función `main` se ejecute solo si el script se ejecuta directamente y no se importa como un módulo en otro script.
 
-## Flujo del Programa
+---
 
-1. **Inicio del Programa:**
-   - El programa comienza ejecutando la función `main`.
-   - Se definen las funciones lambda para realizar las operaciones y se crea el diccionario `operations`.
-
-2. **Bucle Principal:**
-   - El programa entra en un bucle infinito (`while True`) donde solicita la entrada del usuario y realiza operaciones.
-
-3. **Entrada del Usuario:**
-   - El usuario ingresa dos números y elige una operación.
-
-4. **Verificación y Ejecución:**
-   - Se verifica si el usuario desea salir. Si es así, el programa imprime un mensaje y sale del bucle.
-   - Si la operación seleccionada está en el diccionario, se ejecuta la operación correspondiente llamando a la función `ejecutar_operacion`.
-   - Si la operación no es válida, se imprime un mensaje de error.
-
-5. **Repetición:**
-   - El bucle continúa solicitando la entrada del usuario hasta que decide salir.
-
-Espero que esta explicación te ayude a entender cómo funciona el programa. Si tienes alguna pregunta específica o si hay algo en particular que te gustaría saber más, ¡no dudes en preguntar!
-
-# Calculadora Simple en Python
-
-Este es un programa simple de calculadora implementado en Python. Permite al usuario realizar operaciones básicas como suma, resta, multiplicación y división.
-
-## Ejemplo de Salida
+## Ejemplo de Salida del Programa
 
 Ingrese un numero: 10
 Ingrese otro numero: 5
 Elija una operacion (+, -, *, /) o escriba 'exit' para salir: +
 
-Calculando...
-Resultado: 15.0
-
+Calculando...      
+Resultado: 15.0    
 Ingrese un numero: 8
 Ingrese otro numero: 2
 Elija una operacion (+, -, *, /) o escriba 'exit' para salir: *
 
-Calculando...
-Resultado: 16.0
-
+Calculando...      
+Resultado: 16.0    
 Ingrese un numero: 12
 Ingrese otro numero: 0
 Elija una operacion (+, -, *, /) o escriba 'exit' para salir: /
 
 Calculando...
 Resultado: Error: División entre cero
-
 Ingrese un numero: abc
 Input invalido. Por favor ingrese numeros.
 Ingrese un numero: 4
 Ingrese otro numero: 3
 Elija una operacion (+, -, *, /) o escriba 'exit' para salir: -
 
-Calculando...
-Resultado: 1.0
-
-Ingrese un numero: 6
-Ingrese otro numero: 0
-Elija una operacion (+, -, *, /) o escriba 'exit' para salir: /
-
-Calculando...
-Resultado: Error: División entre cero
-
-Ingrese un numero: exit
+Calculando...      
+Resultado: 1.0     
+Ingrese un numero: 3
+Ingrese otro numero: 4
+Elija una operacion (+, -, *, /) o escriba 'exit' para salir: exit 
 Salir.
 
-
-## Comentarios sobre el Ejemplo
+## Explicación de los resultados
 
 - **Suma (Operación `+`):** El usuario ingresó 10 y 5, y eligió la suma. El resultado es 15.
 - **Multiplicación (Operación `*`):** El usuario ingresó 8 y 2, y eligió la multiplicación. El resultado es 16.
-- **División entre Cero (Operación `/`):** El usuario intentó dividir 12 por 0, lo cual resulta en un mensaje de error.
+- **División entre Cero (`Error: División entre cero`):** El usuario intentó dividir 12 entre 0, por lo cual se muestra un mensaje de error.
+- **Valor inválido (`Operación inválida`):** El usuario intentó ingresar algo que no es un número, por lo cual se imprime un mensaje de error.
 - **Resta (Operación `-`):** El usuario ingresó 4 y 3, y eligió la resta. El resultado es 1.
-- **División entre Cero (Operación `/`):** Nuevamente, el usuario intentó dividir, pero esta vez por 0, y recibe un mensaje de error.
-- **Salir (`exit`):** El usuario ingresó "exit", lo que termina el programa.
+- **Salir (`exit`):** El usuario ingresó "exit" y se termina el programa.
