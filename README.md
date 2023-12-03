@@ -87,11 +87,11 @@ Esta función obtiene la entrada del usuario. Utiliza un bloque `try-except` par
 
 ### Función `ejecutar_operacion`:
 
-Toma la entrada del usuario y una función de callback como argumentos. Se llama a la función de callback con los dos números ingresados por el usuario y se muestra el resultado.
+Recibe como argumentos la entrada del usuario y una función de callback. Se llama a la función de callback con los dos números ingresados por el usuario y se muestra el resultado.
 
 ### Función `main`:
 
-Se definen funciones lambda para realizar las operaciones de suma, resta, multiplicación y división. Se crea un diccionario llamado `operations` que relaciona los operadores (+, -, *, /) a las funciones lambda. Utiliza un bucle infinito (`while True`) para pedir la entrada del usuario y realizar las operaciones. Dentro del bucle, se obtiene la entrada del usuario utilizando `get_user_input`. Si el operador ingresado es 'exit' se imprime un mensaje y sale del bucle. Si el operador está en el diccionario `operations` se llama a la función `ejecutar_operacion` con la entrada del usuario y la función lambda que corresponda. Si el operador no está en el diccionario, imprime el mensaje de "Operación inválida". Se previene que el usuario intente usar la operación de división entre cero, en ese caso se imprime un mensaje de "Error: División entre cero".
+Se definen funciones lambda para ejecutar las operaciones de suma, resta, multiplicación y división. Se crea un diccionario llamado `operations` que relaciona los operadores (+, -, *, /) a las funciones lambda. Utiliza un bucle infinito (`while True`) para pedir la entrada del usuario y realizar las operaciones. Dentro del bucle, se obtiene la entrada del usuario utilizando `get_user_input`. Si el operador ingresado es 'exit' se imprime un mensaje y sale del bucle. Si el operador está en el diccionario `operations` se llama a la función `ejecutar_operacion` con la entrada del usuario y la función lambda que corresponda. Si el operador no está en el diccionario, imprime el mensaje de "Operación inválida". Se previene que el usuario intente usar la operación de división entre cero, en ese caso se imprime un mensaje de "Error: División entre cero".
 
 ### Bloque `if __name__ == "__main__":`
 
