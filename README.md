@@ -4,89 +4,88 @@ Este programa en Python simula la generación de datos en tiempo real y notifica
 
 ## datamanager.py
 
-### `RealTimeDataManager` class:
+# Clase `RealTimeDataManager`:
 
 - **Constructor `__init__`:**
-  - Inicializa el objeto llamado `RealTimeDataManager` con unos datos (iniciales) de temperatura y humedad.
+  - Inicia el objeto llamado `RealTimeDataManager` con unos datos (iniciales) de temperatura y humedad.
   - Se crea una instancia de `EventManager` con el nombre de `self.event_manager`.
 
 - **Método `start_real_time_updates`:**
-  - Bucle infinito que espera 3 segundos y luego genera datos en tiempo real llamando a `generate_real_time_data` y notifica a los suscriptores utilizando `self.event_manager.notify`.
+  - Crea un bucle infinito que espera 3 segundos y luego genera datos utilizando `generate_real_time_data` y además notifica a los suscriptores utilizando `self.event_manager.notify`.
 
 - **Método `generate_real_time_data`:**
-  - Modifica los valores de temperatura y humedad de manera aleatoria para simular cambios en los datos en tiempo real.
+  - Modifica los valores de temperatura y humedad aleatoriamente para simular los cambios en los datos.
 
 ## eventos.py
 
-### `EventManager` class:
+### Clase `EventManager`:
 
-- **Constructor (`__init__`):**
-  - Inicializa el objeto `EventManager` con un diccionario que almacenará los eventos y sus respectivos suscriptores.
+- **Constructor `__init__`:**
+  - Inicia el objeto `EventManager` con un diccionario que almacena los eventos y los suscriptores de los mismos.
 
-- **`subscribe` method:**
-  - Permite a un suscriptor registrarse para un evento específico. Si el evento no existe, se crea una lista vacía.
+- **Método `subscribe`:**
+  - Un suscriptor puede registrarse para un evento. Si el evento no existe, se crea una lista vacía.
 
-- **`unsubscribe` method:**
-  - Permite a un suscriptor anular su suscripción a un evento específico.
+- **Método `unsubscribe`:**
+  - Un suscriptor puede anular su suscripción a un evento.
 
-- **`notify` method:**
-  - Notifica a todos los suscriptores registrados para un evento específico llamando a sus callbacks con los datos proporcionados.
+- **Método `notify`:**
+  - Notifica a todos los suscriptores registrados para un evento específico utilizando sus callbacks con los datos indicados.
 
 ## simulacion.py
 
-- **`callback_imprimir_datos` function:**
-  - Una función simple que imprime los datos en tiempo real actualizados.
+- **Función `callback_imprimir_datos`:**
+  - Una función que imprime los datos en tiempo real (actualizados).
 
 - **Código principal:**
-  - Crea una instancia de `RealTimeDataManager`.
-  - Suscribe la función `callback_imprimir_datos` al evento "datos_actualizados".
-  - Crea un hilo para ejecutar el método `start_real_time_updates`.
-  - Establece el hilo como demonio para cerrar el programa completamente al recibir una interrupción de teclado.
-  - Inicia el hilo.
-  - Bucle infinito para mantener el programa en ejecución hasta que se recibe una interrupción de teclado, luego maneja la interrupción e imprime un mensaje de cierre.
+  - Se crea una instancia de `RealTimeDataManager`.
+  - Se suscribe la función `callback_imprimir_datos` al evento "datos_actualizados".
+  - Se crea un hilo para ejecutar el método `start_real_time_updates`.
+  - Se establece el hilo como demonio. Esto es para cerrar el programa completamente al ingresar `Ctrl + C`.
+  - Se inicia el hilo.
+  - El bucle infinito se usa para mantener el programa en ejecución hasta que se recibe una interrupción.
+  - Se maneja la interrupción y se imprime un mensaje de cierre.
 
 ---
 
 **Instrucciones de uso:**
 
-1. Ejecuta `simulacion.py` para iniciar la simulación.
-2. El programa generará datos en tiempo real y notificará a los suscriptores.
+1. Se debe ejecutar `simulacion.py` para iniciar la simulación.
+2. El programa va a generar los datos en tiempo real y notificará a los suscriptores.
 
-**Nota:** Puedes personalizar los eventos y suscriptores según tus necesidades.
+## Ejemplo de Salida del Programa
 
-# Ejemplo de Salida del Programa
-
-## Resultados de la Simulación
-
-Ejecutar el programa `simulacion.py` podría producir una salida similar a la siguiente:
+Al ejecutar el programa `simulacion.py` se produce una salida similar a la siguiente:
 
 Datos en tiempo real actualizados: {'temperatura': 24.8144788325153, 'humedad': 59.22656452432036}
 Datos en tiempo real actualizados: {'temperatura': 25.695321492733867, 'humedad': 61.59471649132475}
 Datos en tiempo real actualizados: {'temperatura': 24.85648409627055, 'humedad': 60.57975982047561}
 
 
-## Comentarios sobre los Resultados
+## Explicación de los resultados
 
 - Cada línea representa una actualización de datos en tiempo real.
-- Los valores de temperatura y humedad se generan aleatoriamente y cambian en cada actualización.
-- Los datos actualizados se imprimen con el formato `{'temperatura': valor, 'humedad': valor}`.
-- La simulación continua hasta que se interrumpe con `Ctrl + C`.
+- Los valores de temperatura y humedad se generan de forma aleatoria y se modifican en cada actualización.
+- Los datos actualizados se imprimen en la siguiente forma: `{'temperatura': valor, 'humedad': valor}`.
+- La simulación continua hasta que se ingresa la interrupción `Ctrl + C`.
 
-**Nota:** Los valores exactos pueden variar en cada ejecución debido a la naturaleza aleatoria de la generación de datos.
+**Nota:** Los valores pueden variar en cada ejecución porque son aleatorios.
 
-# Calculadora Simple en Python
+# Calculadora
 
-Este es un programa simple de calculadora implementado en Python. Permite al usuario realizar operaciones básicas como suma, resta, multiplicación y división.
+Este programa en Python es una calculadora sencilla con operaciones básicas. Permite al usuario realizar operaciones como suma, resta, multiplicación y división. Está conformado solo por un archivo.
 
-## Estructura del Programa
+## calculadora.py
 
-### Función `get_user_input`
+## Estructura del programa
 
-Esta función se encarga de obtener la entrada del usuario. Utiliza un bloque `try-except` para manejar errores en caso de que el usuario ingrese algo que no sea un número. Pide al usuario que ingrese dos números y la operación que desea realizar (+, -, *, /), o puede escribir 'exit' para salir. Si se produce un error de valor al intentar convertir la entrada a `float`, imprime un mensaje de error y solicita la entrada nuevamente mediante una llamada recursiva a la misma función.
+### Función `get_user_input`:
 
-### Función `ejecutar_operacion`
+Esta función obtiene la entrada del usuario. Utiliza un bloque `try-except` para manejar errores en caso de que el usuario ingrese algo inválido (que no sea un número). Pide al usuario que ingrese dos números y la operación que desea realizar (+, -, *, /). También, permite ingresar 'exit' para salir. Si se produce al intentar convertir la entrada a un `float` se imprime un mensaje de error y se solicita la entrada nuevamente.
 
-Toma la entrada del usuario y una función de callback como argumentos. Llama a la función de callback con los dos números ingresados por el usuario y muestra el resultado.
+### Función `ejecutar_operacion`:
+
+Toma la entrada del usuario y una función de callback como argumentos. Se llama a la función de callback con los dos números ingresados por el usuario y se muestra el resultado.
 
 ### Función `main`
 
