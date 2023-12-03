@@ -59,9 +59,10 @@ Garantiza que la función `main` se ejecute solo si el script se ejecuta directa
 
 ## Ejemplo de Salida del Programa
 
-Al ejecutar el programa `simulacion.py` se produce una salida similar a la siguiente:
+Al ejecutar el archivo `simulacion.py` se produce una salida similar a la siguiente:
 
 Datos en tiempo real actualizados: {'temperatura': 24.8144788325153, 'humedad': 59.22656452432036}
+
 Datos en tiempo real actualizados: {'temperatura': 25.695321492733867, 'humedad': 61.59471649132475}
 Datos en tiempo real actualizados: {'temperatura': 24.85648409627055, 'humedad': 60.57975982047561}
 
@@ -100,6 +101,8 @@ Garantiza que la función `main` se ejecute solo si el script se ejecuta directa
 ---
 
 ## Ejemplo de Salida del Programa
+
+Al ejecutar el archivo `calculadora.py` se produce una salida similar a la siguiente:
 
 Ingrese un numero: 10
 Ingrese otro numero: 5
