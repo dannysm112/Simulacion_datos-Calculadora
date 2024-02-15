@@ -2,6 +2,7 @@
 def get_user_input():
     try:
         print("hola")
+        print("efewfewge")
         num1 = float(input("Ingrese un numero: "))
         num2 = float(input("Ingrese otro numero: "))
         operation = input("Elija una operacion (+, -, *, /) o escriba 'exit' para salir: ")
